@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>PatientRed</Authors>
+    <Copyright>PatientRed</Copyright>
+    <Description>Test for Mindbox</Description>
+    <PackageProjectUrl>https://github.com/PatientRed/hemiphaga</PackageProjectUrl>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+    <Version>0.0.1-alpha</Version>
+  </PropertyGroup>
+
+</Project>
