@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part2 SQL", "Part2 SQL", "{
 		Part2 SQL\Table creation.sql = Part2 SQL\Table creation.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoW", "PoW\PoW.csproj", "{156736DA-7F4E-47C0-AFCA-560045B0B511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{CFD281F6-6DD8-4B88-BA80-6431566465E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD281F6-6DD8-4B88-BA80-6431566465E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD281F6-6DD8-4B88-BA80-6431566465E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
