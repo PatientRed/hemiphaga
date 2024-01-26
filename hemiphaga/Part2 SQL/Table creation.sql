@@ -1,0 +1,66 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Products1](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](100) NULL,
+	[Color] [varchar](50) NULL,
+	[Other] [varchar](1000) NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Category1](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NULL,
+	[Description] [varchar](1000) NULL,
+ CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+--you have many-to-many, but saw nothing about realization, assumed you have a junction table
+CREATE TABLE [dbo].[ProductsByCategory1](
+	[CategoryId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+ CONSTRAINT [PK_Products by category] PRIMARY KEY CLUSTERED 
+(
+	[CategoryId] ASC,
+	[ProductId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[ProductsByCategory1]  WITH CHECK ADD  CONSTRAINT [FK_ProductsByCategory1_Category1] FOREIGN KEY([CategoryId])
+REFERENCES [dbo].[Category1] ([ID])
+GO
+
+ALTER TABLE [dbo].[ProductsByCategory1] CHECK CONSTRAINT [FK_ProductsByCategory1_Category1]
+GO
+
+ALTER TABLE [dbo].[ProductsByCategory1]  WITH CHECK ADD  CONSTRAINT [FK_ProductsByCategory1_Products1] FOREIGN KEY([ProductId])
+REFERENCES [dbo].[Products1] ([ID])
+GO
+
+ALTER TABLE [dbo].[ProductsByCategory1] CHECK CONSTRAINT [FK_ProductsByCategory1_Products1]
+GO

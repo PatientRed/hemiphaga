@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hemiphaga", "hemiphaga\hemiphaga.csproj", "{CFD281F6-6DD8-4B88-BA80-6431566465E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hemiphaga", "hemiphaga\hemiphaga.csproj", "{CFD281F6-6DD8-4B88-BA80-6431566465E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part2 SQL", "Part2 SQL", "{A1DB4D43-9E33-4548-8FEC-90D2EBA5F729}"
+	ProjectSection(SolutionItems) = preProject
+		Part2 SQL\diagram.jpg = Part2 SQL\diagram.jpg
+		Part2 SQL\Selection.sql = Part2 SQL\Selection.sql
+		Part2 SQL\Table contents.sql = Part2 SQL\Table contents.sql
+		Part2 SQL\Table creation.sql = Part2 SQL\Table creation.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
