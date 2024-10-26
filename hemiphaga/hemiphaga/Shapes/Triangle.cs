@@ -6,7 +6,7 @@
         private readonly double _side2 = side2;
         private readonly double _side3 = side3;
 
-        private const double _precision = .001;
+        private const double _precision = .000_001;
 
         public bool IsRight
         {
