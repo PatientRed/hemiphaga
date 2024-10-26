@@ -1,6 +1,6 @@
 ﻿namespace hemiphaga
 {
-    public class Triangle(double side1, double side2, double side3) : IShape
+    public class Triangle(double side1, double side2, double side3) : ICreatableShape<Triangle>
     {
         private readonly double _side1 = side1;
         private readonly double _side2 = side2;
@@ -38,5 +38,7 @@
                 return Math.Sqrt(sp * (sp - _side1) * (sp - _side2) * (sp - _side3));
             }
         }
+
+        public static Triangle Create(params double[] input) => new Triangle(input[0], input[1], input[2]);
     }
 }
