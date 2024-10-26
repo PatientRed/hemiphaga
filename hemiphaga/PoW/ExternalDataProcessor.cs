@@ -1,5 +1,4 @@
 ﻿using hemiphaga;
-using PoW.MyShapes;
 using System.Globalization;
 
 namespace PoW
@@ -15,6 +14,6 @@ namespace PoW
                                                                    new ArraySegment<string>(args, 1, args.Length - 1)
                                                                         .Select(arg => double.Parse(arg, CultureInfo.InvariantCulture))
                                                                         .ToArray()))
-                 .Select(shape => MyShapeFactory.CreateShape(shape.Key, shape.Value));
+                 .Select(shape => SimpleShapeFactory.Create(shape.Key, shape.Value));
     }
 }

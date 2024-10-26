@@ -21,7 +21,7 @@ namespace PoW.MyShapes
                 case nameof(Square):
                     return Square.Create(values[0]);
                 default:
-                    return ShapeFactory.CreateShape(name, values);
+                    return SimpleShapeFactory.Create(name, values);
             }
         }
     }
