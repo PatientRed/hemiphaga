@@ -19,12 +19,12 @@
                 if (_side1 > _side2)
                 {
                     if (_side1 > _side3)
-                        return Math.Abs(sq1 - sq2 - sq3) < _precision;
+                        return Math.Abs(sq1 - sq2 - sq3) < _precision; //sq1 = sq2+sq3
                 }
                 else if (_side2 > _side3)
-                    return Math.Abs(sq2 - sq1 - sq3) < _precision;
+                    return Math.Abs(sq2 - sq1 - sq3) < _precision; //sq2 = sq1+sq3
 
-                return Math.Abs(sq3 - sq1 - sq2) < _precision;
+                return Math.Abs(sq3 - sq1 - sq2) < _precision; //sq3 = sq1+sq2
             }
         }
 
