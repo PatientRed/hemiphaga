@@ -2,6 +2,6 @@
 {
     public interface IShape
     {
-        public double CalculateArea();
+        public double Area => throw new NotImplementedException();
     }
 }

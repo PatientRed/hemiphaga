@@ -7,7 +7,7 @@ namespace PoW.MyShapes
     {
         private readonly double _side = side;
 
-        public double CalculateArea() => _side * _side;
+        public double Area => _side * _side;
     }
 
     internal static class MyShapeFactory

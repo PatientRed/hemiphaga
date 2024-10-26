@@ -4,6 +4,6 @@
     {
         private readonly double _radius = radius;
 
-        public double CalculateArea() => Math.PI * _radius * _radius;
+        public double Area => Math.PI * _radius * _radius;
     }
 }

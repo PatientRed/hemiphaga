@@ -28,12 +28,15 @@
             }
         }
 
-        public double CalculateArea()
+        public double Area
         {
-            //See Heron's formula
-            var sp = (_side1 + _side2 + _side3) / 2;
+            get
+            {
+                //See Heron's formula
+                var sp = (_side1 + _side2 + _side3) / 2;
 
-            return Math.Sqrt(sp * (sp - _side1) * (sp - _side2) * (sp - _side3));
+                return Math.Sqrt(sp * (sp - _side1) * (sp - _side2) * (sp - _side3));
+            }
         }
     }
 }
