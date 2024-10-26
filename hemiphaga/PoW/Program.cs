@@ -11,7 +11,7 @@ namespace PoW
                 Console.WriteLine($"Figure: {shape.GetType().Name}");
                 Console.WriteLine($"Area: {shape.Area}");
                 if (shape is Triangle)
-                    Console.WriteLine($"Triangle is right: {(shape as Triangle).IsRight}");
+                    Console.WriteLine($"Triangle is right: {(shape as Triangle)!.IsRight}");
                 Console.WriteLine();
             }
 
