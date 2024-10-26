@@ -11,18 +11,4 @@ namespace PoW.MyShapes
 
         public static Square Create(params double[] input) => new Square(input[0]);
     }
-
-    internal static class MyShapeFactory
-    {
-        public static IShape CreateShape(string name, params double[] values)
-        {
-            switch (name)
-            {
-                case nameof(Square):
-                    return Square.Create(values[0]);
-                default:
-                    return SimpleShapeFactory.Create(name, values);
-            }
-        }
-    }
 }
