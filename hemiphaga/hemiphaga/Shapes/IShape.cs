@@ -10,4 +10,7 @@
     {
         public static abstract T Create(params double[] input);
     }
+
+    public interface ICreatableShape<T> : IShape, ICreatable<T> where T : ICreatableShape<T>
+    { }
 }
