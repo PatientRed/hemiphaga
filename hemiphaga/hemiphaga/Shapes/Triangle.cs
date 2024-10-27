@@ -1,12 +1,12 @@
-﻿namespace hemiphaga
+﻿using static hemiphaga.Hemiphaga;
+
+namespace hemiphaga
 {
     public class Triangle : ICreatableShape<Triangle>
     {
         private readonly double _side1;
         private readonly double _side2;
         private readonly double _side3;
-
-        private const double _precision = .000_001;
 
         public bool IsRight
         {
@@ -19,12 +19,12 @@
                 if (_side1 > _side2)
                 {
                     if (_side1 > _side3)
-                        return Math.Abs(sq1 - sq2 - sq3) < _precision; //sq1 = sq2+sq3
+                        return Math.Abs(sq1 - sq2 - sq3) < Precision; //sq1 = sq2+sq3
                 }
                 else if (_side2 > _side3)
-                    return Math.Abs(sq2 - sq1 - sq3) < _precision; //sq2 = sq1+sq3
+                    return Math.Abs(sq2 - sq1 - sq3) < Precision; //sq2 = sq1+sq3
 
-                return Math.Abs(sq3 - sq1 - sq2) < _precision; //sq3 = sq1+sq2
+                return Math.Abs(sq3 - sq1 - sq2) < Precision; //sq3 = sq1+sq2
             }
         }
 
@@ -41,13 +41,13 @@
 
         private static bool VerifyTriangleCorrectness(double s1, double s2, double s3)
         {
-            if (s1 < _precision || s2 < _precision || s3 < _precision) //any side <= 0
+            if (s1 < Precision || s2 < Precision || s3 < Precision) //any side <= 0
                 return false;
 
             var sum = s1 + s2 + s3;
             double max = Math.Max(Math.Max(s1, s2), s3); ;
 
-            return Math.Abs(max + max - sum) < _precision; //max < sum - max
+            return Math.Abs(max + max - sum) < Precision; //max < sum - max
         }
 
         public static Triangle Create(params double[] input) => new Triangle(input[0], input[1], input[2]);
