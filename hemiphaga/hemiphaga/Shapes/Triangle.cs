@@ -1,10 +1,10 @@
 ﻿namespace hemiphaga
 {
-    public class Triangle(double side1, double side2, double side3) : ICreatableShape<Triangle>
+    public class Triangle : ICreatableShape<Triangle>
     {
-        private readonly double _side1 = side1;
-        private readonly double _side2 = side2;
-        private readonly double _side3 = side3;
+        private readonly double _side1;
+        private readonly double _side2;
+        private readonly double _side3;
 
         private const double _precision = .000_001;
 
@@ -51,5 +51,15 @@
         }
 
         public static Triangle Create(params double[] input) => new Triangle(input[0], input[1], input[2]);
+
+        public Triangle(double side1, double side2, double side3)
+        {
+            if (!VerifyTriangleCorrectness(side1, side2, side3))
+                throw new ArgumentException("Triangle is incorrect.");
+
+            _side1 = side1;
+            _side2 = side2;
+            _side3 = side3;
+        }
     }
 }
