@@ -6,6 +6,7 @@ namespace hemiphaga.Tests
     public class TriangleTests
     {
         private static readonly double[] _right = [3, 4, 5];
+        private static readonly double[] _notRight = [3, 4, 6];
         private static readonly double[] _incorrect = [4, 4, 8];
 
         [TestMethod()]
@@ -35,6 +36,24 @@ namespace hemiphaga.Tests
         public void TriangleAreaTest()
         {
             Assert.AreEqual(Helper.Construct(nameof(Triangle), _right).Area, 6, Hemiphaga.Precision);
+        }
+
+        [TestMethod]
+        public void TriangleRightnessGoodTest()
+        {
+            var t = Helper.Construct(nameof(Triangle), _right);
+
+            Assert.IsInstanceOfType<Triangle>(t);
+            Assert.IsTrue((t as Triangle).IsRight);
+        }
+
+        [TestMethod]
+        public void TriangleRightnessBadTest()
+        {
+            var t = Helper.Construct(nameof(Triangle), _notRight);
+
+            Assert.IsInstanceOfType<Triangle>(t);
+            Assert.IsFalse((t as Triangle).IsRight);
         }
     }
 }
