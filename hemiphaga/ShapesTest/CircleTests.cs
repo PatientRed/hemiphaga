@@ -9,7 +9,7 @@ namespace ShapesTest
         private const double _piArea = 1;
 
         [TestMethod]
-        public void CircleCreationThrow()
+        public void CircleCreationThrowTest()
         {
             var r = 0;
 
@@ -25,7 +25,7 @@ namespace ShapesTest
         }
 
         [TestMethod]
-        public void CircleAreaGood()
+        public void CircleAreaGoodTest()
         {
             var res = Helper.Construct(nameof(Circle), [_piArea * 2]);
 
