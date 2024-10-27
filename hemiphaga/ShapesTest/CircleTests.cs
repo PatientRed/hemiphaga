@@ -1,7 +1,6 @@
-using hemiphaga;
 using System.Reflection;
 
-namespace ShapesTest
+namespace hemiphaga.Tests
 {
     [TestClass]
     public class CircleTests

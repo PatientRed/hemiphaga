@@ -1,6 +1,4 @@
-﻿using hemiphaga;
-
-namespace ShapesTest
+﻿namespace hemiphaga.Tests
 {
     internal static class Helper
     {
