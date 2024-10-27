@@ -47,7 +47,7 @@
             var sum = s1 + s2 + s3;
             double max = Math.Max(Math.Max(s1, s2), s3); ;
 
-            return max + max - sum < _precision; //max < sum - max
+            return Math.Abs(max + max - sum) < _precision; //max < sum - max
         }
 
         public static Triangle Create(params double[] input) => new Triangle(input[0], input[1], input[2]);
