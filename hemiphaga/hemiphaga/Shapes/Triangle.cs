@@ -39,6 +39,17 @@
             }
         }
 
+        private static bool VerifyTriangleCorrectness(double s1, double s2, double s3)
+        {
+            if (s1 < _precision || s2 < _precision || s3 < _precision) //any side <= 0
+                return false;
+
+            var sum = s1 + s2 + s3;
+            double max = Math.Max(Math.Max(s1, s2), s3); ;
+
+            return max + max - sum < _precision; //max < sum - max
+        }
+
         public static Triangle Create(params double[] input) => new Triangle(input[0], input[1], input[2]);
     }
 }
