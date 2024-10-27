@@ -2,9 +2,9 @@
 
 namespace hemiphaga
 {
-    public class Circle(double radius) : ICreatableShape<Circle>
+    public class Circle : ICreatableShape<Circle>
     {
-        private readonly double _radius = radius;
+        private readonly double _radius;
 
         public double Area => Math.PI * _radius * _radius;
 
@@ -16,6 +16,14 @@ namespace hemiphaga
                 return false;
 
             return true;
+        }
+
+        public Circle(double radius)
+        {
+            if (!VerifyCircleCorrectness(radius))
+                throw new ArgumentException("Triangle is incorrect.");
+
+            _radius = radius;
         }
     }
 }
