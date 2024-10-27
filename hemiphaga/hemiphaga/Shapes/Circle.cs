@@ -21,7 +21,7 @@ namespace hemiphaga
         public Circle(double radius)
         {
             if (!VerifyCircleCorrectness(radius))
-                throw new ArgumentOutOfRangeException("Triangle is incorrect.");
+                throw new ArgumentOutOfRangeException(nameof(radius));
 
             _radius = radius;
         }
