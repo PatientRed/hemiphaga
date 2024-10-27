@@ -13,7 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part2 SQL", "Part2 SQL", "{
 		Part2 SQL\Table creation.sql = Part2 SQL\Table creation.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoW", "PoW\PoW.csproj", "{156736DA-7F4E-47C0-AFCA-560045B0B511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoW", "PoW\PoW.csproj", "{156736DA-7F4E-47C0-AFCA-560045B0B511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesTest", "ShapesTest\ShapesTest.csproj", "{34261887-CBBC-4B1F-8FE5-0D26BE7043E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CFD281F6-6DD8-4B88-BA80-6431566465E2} = {CFD281F6-6DD8-4B88-BA80-6431566465E2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +34,10 @@ Global
 		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{156736DA-7F4E-47C0-AFCA-560045B0B511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34261887-CBBC-4B1F-8FE5-0D26BE7043E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34261887-CBBC-4B1F-8FE5-0D26BE7043E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34261887-CBBC-4B1F-8FE5-0D26BE7043E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34261887-CBBC-4B1F-8FE5-0D26BE7043E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
