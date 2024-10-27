@@ -27,9 +27,9 @@ namespace ShapesTest
         [TestMethod]
         public void CircleAreaGood()
         {
-            var res = Helper.Construct(nameof(Circle), [_piArea]);
+            var res = Helper.Construct(nameof(Circle), [_piArea * 2]);
 
-            Assert.AreEqual(Math.PI, res.Area, Hemiphaga.Precision);
+            Assert.AreEqual(Math.PI * 4, res.Area, Hemiphaga.Precision);
         }
     }
 }
